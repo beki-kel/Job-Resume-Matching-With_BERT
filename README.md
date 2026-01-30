@@ -1,40 +1,28 @@
 # JobMatch AI 🤖
 
-AI-Powered Resume-Job Matching System with Glassmorphic UI
+AI powered resume job website that allows you to Upload your resume, get AI analysis, and find matching jobs from Telegram channels.
 
-## Overview
+## ✨ Features
 
-JobMatch AI is a full-stack application that uses AI to match resumes with job postings from Telegram channels. It features a modern glassmorphic UI, semantic matching with fine-tuned BERT, and LLM-powered explanations.
+- 🎯 **Smart Matching** - Fine-tuned BERT model for semantic job matching
+- 🧠 **AI Analysis** - Gemini LLM analyzes resumes and explains matches
+- 📱 **Telegram Integration** - Scrapes jobs from Ethiopian job channels
+- ⚡ **Fast** - Redis caching for instant results
+- � **Privacy** - Automatic PII removal from resumes
 
-## Features
-
-### Backend (FastAPI)
-- 🤖 **Fine-tuned BERT Model** - Semantic job matching
-- 🧠 **Gemini LLM Integration** - Resume analysis & match explanations
-- 📄 **PDF Processing** - Extract text from resume PDFs
-- 🔒 **PII Removal** - Automatic removal of personal information
-- 📱 **Telegram Scraping** - Fetch jobs from Telegram channels
-- 💾 **Redis Caching** - Smart daily cache strategy
-- 🔗 **Direct Links** - Telegram message links for each job
-- 🐳 **Docker Support** - Easy deployment
-
-### Frontend (Next.js)
-- 🎨 **Glassmorphic Design** - Apple-inspired dark theme
-- ⚡ **Next.js 15** - Latest React framework
-- 🎭 **Framer Motion** - Smooth animations
-- 📱 **Responsive** - Works on all devices
-- ✨ **Shimmer Loading** - Beautiful loading states
-- 🎯 **Clean Architecture** - Maintainable codebase
-- 🔄 **Real-time Updates** - Live processing feedback
-
-## Quick Start
+## � Quick Start
 
 ### Prerequisites
+```bash
+# Required
 - Python 3.9+
 - Node.js 18+
 - Redis
-- Telegram API credentials
-- Google Gemini API key
+
+# API Keys (free)
+- Telegram API: https://my.telegram.org/apps
+- Gemini API: https://aistudio.google.com/app/apikey
+```
 
 ### 1. Backend Setup
 
@@ -44,15 +32,15 @@ cd backend
 # Install dependencies
 pip install -r requirements.txt
 
-# Configure environment
+# Configure
 cp .env.example .env
-# Edit .env with your credentials
+# Add your API keys to .env
 
 # Start server
 ./run_server.sh
 ```
 
-Backend runs on http://localhost:8000
+Backend runs at **http://localhost:8000**
 
 ### 2. Frontend Setup
 
@@ -62,120 +50,53 @@ cd frontend
 # Install dependencies
 npm install
 
-# Configure environment
-cp .env.example .env.local
-# Edit .env.local if needed
-
-# Start development server
+# Start app
 npm run dev
 ```
 
-Frontend runs on http://localhost:3000
+Frontend runs at **http://localhost:3000**
 
-### 3. Open Application
+### 3. Use the App
 
-Visit http://localhost:3000 and start matching resumes!
+1. Open http://localhost:3000
+2. Upload your resume (PDF)
+3. View AI analysis
+4. Browse matching jobs
+5. Click to apply on Telegram
 
-## Architecture
+## 🎨 UI Features
 
-### Backend Structure
-```
-backend/
-├── app/
-│   ├── api/              # API routes
-│   ├── core/             # Configuration
-│   ├── domain/           # Models & schemas
-│   ├── infrastructure/   # External services
-│   │   ├── cache/       # Redis cache
-│   │   ├── llm/         # Gemini client
-│   │   ├── ml/          # BERT model
-│   │   └── telegram/    # Telegram scraper
-│   ├── services/         # Business logic
-│   └── utils/            # Utilities
-├── tests/                # Tests
-└── .env                  # Environment variables
-```
+- **Aurora Background** - Animated gradient effects
+- **Glass Cards** - Shining edges on hover
+- **Iconsax Icons** - Modern, bold icons
+- **Smooth Animations** - Framer Motion transitions
+- **Responsive** - Works on all devices
 
-### Frontend Structure
-```
-frontend/
-├── app/                  # Next.js App Router
-│   ├── layout.tsx       # Root layout
-│   ├── page.tsx         # Main page
-│   └── globals.css      # Global styles
-├── components/
-│   ├── features/        # Feature components
-│   └── ui/              # UI components
-├── lib/
-│   ├── api/             # API client
-│   ├── hooks/           # Custom hooks
-│   ├── types/           # TypeScript types
-│   ├── utils/           # Utilities
-│   └── constants/       # Constants
-└── public/              # Static assets
-```
-
-## User Flow
-
-1. **Upload Resume** - Drag & drop PDF file
-2. **AI Analysis** - View resume score, strengths, improvements
-3. **Job Matches** - Browse ranked job listings with scores
-4. **Apply** - Click Telegram link to apply directly
-
-## API Endpoints
-
-### Resume Processing
-```bash
-POST /process_resume
-- Upload PDF resume
-- Returns: Analysis with score, strengths, improvements, skills
-```
-
-### Job Matching
-```bash
-POST /match_resume
-- Body: { resume_text, threshold, max_results, generate_explanations }
-- Returns: Ranked job matches with scores and explanations
-```
-
-### Cache Management
-```bash
-GET /cache/info
-- Returns: Cache status and job count
-
-POST /refresh_jobs
-- Force refresh job cache
-```
-
-### Health Check
-```bash
-GET /health
-- Returns: System status
-```
-
-## Configuration
+## ⚙️ Configuration
 
 ### Backend (.env)
 ```env
-# Telegram
-TELEGRAM_API_ID=your_api_id
-TELEGRAM_API_HASH=your_api_hash
-TELEGRAM_PHONE=+1234567890
-TELEGRAM_CHANNELS=["@channel1", "@channel2"]
+# Telegram API (get from https://my.telegram.org/apps)
+TELEGRAM_API_ID=your_id
+TELEGRAM_API_HASH=your_hash
+TELEGRAM_PHONE=+251912345678
 
-# LLM
-GEMINI_API_KEY=your_gemini_key
+# Gemini API (get from https://aistudio.google.com/app/apikey)
+GEMINI_API_KEY=your_key
 GEMINI_MODEL=gemini-2.0-flash
 
-# Model
-MODEL_PATH=../fine_tuned_telegram_model
+# Job Channels (Ethiopian job channels)
+TELEGRAM_CHANNELS=["@freelance_ethio", "@ethiojobsofficial", "@effoyjobs", "@web3hiring", "@harmeejobs"]
 
-# Scraping
+# Scraping Settings
 MAX_POSTS_PER_CHANNEL=300
 SCRAPE_DAYS_BACK=14
 
 # Redis
 REDIS_URL=redis://localhost:6379/0
+
+# Model Path
+MODEL_PATH=../fine_tuned_telegram_model
 ```
 
 ### Frontend (.env.local)
@@ -183,116 +104,135 @@ REDIS_URL=redis://localhost:6379/0
 NEXT_PUBLIC_API_URL=http://localhost:8000
 ```
 
-## Performance
+## 📁 Project Structure
 
-- **Resume Processing**: ~3-5s (LLM analysis)
-- **Job Matching**: ~0.5s (with cache)
-- **Total Flow**: ~5-6s (end-to-end)
-- **Cache Hit Rate**: 99% (after first scrape)
+```
+├── backend/              # FastAPI backend
+│   ├── app/
+│   │   ├── api/         # API routes
+│   │   ├── services/    # Business logic
+│   │   ├── infrastructure/  # External services
+│   │   └── domain/      # Models & schemas
+│   └── .env             # Configuration
+│
+├── frontend/            # Next.js frontend
+│   ├── app/            # Pages
+│   ├── components/     # React components
+│   ├── lib/            # Utilities & hooks
+│   └── .env.local      # Configuration
+│
+└── fine_tuned_telegram_model/  # BERT model
+```
 
-## Tech Stack
+## 🔧 Tech Stack
 
-### Backend
-- **Framework**: FastAPI
-- **ML**: PyTorch, Transformers, Sentence-BERT
-- **LLM**: Google Gemini
-- **Cache**: Redis
-- **Scraping**: Telethon
-- **PDF**: PyPDF2, pdfplumber
+**Backend**
+- FastAPI - Web framework
+- PyTorch - ML framework
+- Sentence-BERT - Semantic matching
+- Gemini - LLM for analysis
+- Redis - Caching
+- Telethon - Telegram scraping
 
-### Frontend
-- **Framework**: Next.js 15
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS v4
-- **Animations**: Framer Motion
-- **Icons**: Lucide React
-- **HTTP**: Axios
+**Frontend**
+- Next.js 15 - React framework
+- TypeScript - Type safety
+- Tailwind CSS v4 - Styling
+- Framer Motion - Animations
+- Iconsax - Icons
 
-## Documentation
+## 📊 How It Works
 
-### Backend
-- [README](backend/README.md)
-- [Architecture](backend/ARCHITECTURE.md)
-- [Features](backend/FEATURES.md)
-- [Complete Workflow](backend/COMPLETE_WORKFLOW.md)
-- [Caching Strategy](backend/CACHING_STRATEGY.md)
+1. **Resume Upload** → PDF text extraction + PII removal
+2. **AI Analysis** → Gemini scores resume (1-10) + extracts skills
+3. **Job Scraping** → Fetches jobs from Telegram (cached daily)
+4. **Matching** → BERT computes similarity scores (57%+ threshold)
+5. **Explanations** → Gemini explains why jobs match
+6. **Results** → Ranked jobs with direct Telegram links
 
-### Frontend
-- [README](frontend/README.md)
-- [Frontend Complete](FRONTEND_COMPLETE.md)
+## 🎯 API Endpoints
 
-### API
-- Swagger UI: http://localhost:8000/docs
-- ReDoc: http://localhost:8000/redoc
+```bash
+# Process resume
+POST /process_resume
+- Upload: PDF file
+- Returns: Score, strengths, improvements, skills
 
-## Deployment
+# Match jobs
+POST /match_resume
+- Body: { resume_text, threshold: 0.57, max_results: 20 }
+- Returns: Ranked job matches with explanations
 
-### Backend (Docker)
+# Cache info
+GET /cache/info
+
+# Health check
+GET /health
+```
+
+Full API docs: http://localhost:8000/docs
+
+## 🐳 Docker Deployment
+
 ```bash
 cd backend
 docker-compose up -d
 ```
 
-### Frontend (Vercel)
+## 🔍 Troubleshooting
+
+**Backend won't start?**
+- Check Redis: `redis-cli ping` (should return PONG)
+- Verify API keys in `.env`
+- Check logs: `tail -f backend/logs/*.log`
+
+**Frontend build error?**
+- Clear cache: `rm -rf frontend/.next`
+- Reinstall: `cd frontend && npm install`
+
+**No jobs found?**
+- Wait for initial scrape (~2 min)
+- Check cache: `curl http://localhost:8000/cache/info`
+- Force refresh: `curl -X POST http://localhost:8000/refresh_jobs`
+
+**Gemini rate limit?**
+- Free tier: 15 requests/min
+- Wait 1 minute or upgrade API key
+
+## 📝 Development
+
 ```bash
-cd frontend
-vercel
+# Backend with auto-reload
+cd backend && ./run_server.sh
+
+# Frontend with hot reload
+cd frontend && npm run dev
+
+# Run tests
+cd backend && pytest
 ```
 
-## Development
+## 🎓 For Beginners
 
-### Backend
-```bash
-cd backend
-./run_server.sh
-```
+**Never used Python/Node.js?**
 
-### Frontend
-```bash
-cd frontend
-npm run dev
-```
+1. Install Python: https://python.org/downloads
+2. Install Node.js: https://nodejs.org
+3. Install Redis: 
+   - Mac: `brew install redis && brew services start redis`
+   - Ubuntu: `sudo apt install redis-server`
+   - Windows: https://redis.io/docs/install/install-redis/install-redis-on-windows/
 
-### Run Tests
-```bash
-cd backend
-pytest
-```
+4. Follow Quick Start above
 
-## Troubleshooting
+**Need help with API keys?**
+- Telegram: Login → https://my.telegram.org/apps → Create app
+- Gemini: Login → https://aistudio.google.com/app/apikey → Create key
 
-### Backend Issues
-- Check Redis is running: `redis-cli ping`
-- Verify Telegram credentials
-- Check Gemini API key
-- Review logs: `docker-compose logs -f api`
-
-### Frontend Issues
-- Clear Next.js cache: `rm -rf .next`
-- Reinstall dependencies: `rm -rf node_modules && npm install`
-- Check API connection: `curl http://localhost:8000/health`
-
-## Contributing
-
-1. Follow clean architecture principles
-2. Use TypeScript for type safety
-3. Add proper error handling
-4. Write meaningful commit messages
-5. Update documentation
-
-## License
+## 📄 License
 
 MIT
 
-## Support
-
-For issues or questions:
-- Check documentation in respective folders
-- Review API docs at http://localhost:8000/docs
-- Open an issue on GitHub
-
 ---
 
-**Built with ❤️ using AI-powered technologies**
-
-🚀 **Ready to use!** Open http://localhost:3000 and start matching!
+**🚀 Ready to match resumes!** Open http://localhost:3000
