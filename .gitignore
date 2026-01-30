@@ -1,0 +1,162 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb_checkpoints/
+
+# PyCharm
+.idea/
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Environment variables
+.env
+*.env
+!.env.example
+
+# Model files (large files)
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.h5
+*.pkl
+*.pickle
+
+# Model directories (keep structure, ignore weights)
+fine_tuned_bert/*.safetensors
+fine_tuned_bert/*.bin
+fine_tuned_bert/optimizer.pt
+fine_tuned_bert/scheduler.pt
+fine_tuned_bert/rng_state.pth
+
+fine_tuned_all-mpnet-base-v2/*.safetensors
+fine_tuned_all-mpnet-base-v2/*.bin
+
+fine_tuned_job_app/*.safetensors
+fine_tuned_job_app/*.bin
+
+fine_tuned_telegram_model/*.safetensors
+fine_tuned_telegram_model/*.bin
+
+kaggle_model/*.safetensors
+kaggle_model/*.bin
+
+# Training checkpoints (very large)
+checkpoints/
+results/
+results_*/
+kaggle_results/
+optuna_results/
+
+# Telegram session files
+*.session
+*.session-journal
+
+# Cache
+*.pyc
+.cache/
+.pytest_cache/
+
+# Logs
+*.log
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Data files (can be large)
+*.csv
+!job_applicant_dataset.csv
+*.jsonl
+*.parquet
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Redis dump
+dump.rdb
+
+# Node modules (if any)
+node_modules/
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+
+# MyPy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pytest
+.pytest_cache/
+
+# Documentation builds
+docs/_build/
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# IDE
+*.sublime-project
+*.sublime-workspace
+
+# Mac
+.AppleDouble
+.LSOverride
+Icon
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.directory
+.Trash-*

@@ -1,0 +1,75 @@
+version: '3.8'
+
+services:
+  # Redis cache
+  redis:
+    image: redis:7-alpine
+    container_name: resume_matcher_redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    command: redis-server --appendonly yes
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - resume_matcher_network
+
+  # FastAPI backend
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: resume_matcher_api
+    ports:
+      - "8000:8000"
+    environment:
+      # API Settings
+      - DEBUG=false
+      - CORS_ORIGINS=["*"]
+      
+      # Model Settings
+      - MODEL_PATH=/app/fine_tuned_bert
+      
+      # Telegram Settings (set these in .env file)
+      - TELEGRAM_API_ID=${TELEGRAM_API_ID}
+      - TELEGRAM_API_HASH=${TELEGRAM_API_HASH}
+      - TELEGRAM_PHONE=${TELEGRAM_PHONE}
+      
+      # Redis
+      - REDIS_URL=redis://redis:6379/0
+      
+      # Scraping
+      - MAX_POSTS_PER_CHANNEL=100
+      - SCRAPE_SLEEP_SECONDS=3.0
+      - CACHE_TTL_SECONDS=3600
+    volumes:
+      # Mount fine-tuned model (adjust path to your model location)
+      - ./fine_tuned_bert:/app/fine_tuned_bert:ro
+      # Mount Telegram session (persists login)
+      - telegram_session:/app
+    depends_on:
+      redis:
+        condition: service_healthy
+    restart: unless-stopped
+    networks:
+      - resume_matcher_network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+volumes:
+  redis_data:
+    driver: local
+  telegram_session:
+    driver: local
+
+networks:
+  resume_matcher_network:
+    driver: bridge
