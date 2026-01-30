@@ -5,114 +5,150 @@ tags:
 - feature-extraction
 - dense
 - generated_from_trainer
-- dataset_size:4609
+- dataset_size:4571
 - loss:CosineSimilarityLoss
 base_model: sentence-transformers/all-MiniLM-L6-v2
 widget:
-- source_sentence: 'IABAC Certified Data Scientist with versatile experience over
-    1+ years in managing business, data science consulting and leading innovation
-    projects, bringing business ideas to working real world solutions. Being a strong
-    advocator of augmented era, where human capabilities are enhanced by machines,
-    Fahed is passionate about bringing business concepts in area of machine learning,
-    AI, robotics etc., to real life solutions. {''level'': ''B. Tech'', ''field'':
-    ''Computer Science & Engineering'', ''major'': None}'
+- source_sentence: 'Popular north else sound center throughout. Thousand rock speak
+    yeah. Lawyer where later person including. {''name'': ''English'', ''level'':
+    ''fluent''} {''level'': ''MSc'', ''field'': ''Computer Science'', ''major'': ''Node.Js''}'
   sentences:
-  - Blackbird is hiring [Support Ops & Payments Contractor](
-  - 'Job Title: **Realestate sales consultant** Job Type: **On-site - Permanent (Full-time)**
-    Work Location: **Addis Ababa, Ethiopia** Salary/Compensation: **Monthly** Deadline:
-    **February 4th, 2026** **Description**: አስቸኳይ የስራ ማስታወቂያ! የስራው ዝርዝር: - ድርጅታችን
-    ሪሊያብል ሆምስ በሪልእስቴት ሽያጭ ዘርፍ የሽያጭ ሰራተኞችን አወዳድሮ መቅጥር ይፈልጋል. - በማህበራዊ ሚዲያ ላይ በደንብ መስራት
-    የሚችል/የምትችል እና ስራው በሚፈልገው ክሬቲቭ የሶሻል ሚድያ ኮንቴንት ማዘጋጀት የሚችል/የምትችል - ጥሩ የመግባባት ች **...
-    __[view details below]__** __________________ **Reliable Homes Business and Marketing**
-    __Verified Company ✅__ 11 Jobs Posted __________________ From: afriworket.com
-    | | |'
-  - Paradex is [Hiring Senior Infrastructure Engineer](
-- source_sentence: 'While fact to win. Hour beat high statement we. Name second themselves
-    serve seem yes project together. Experience imagine whole its position line. {''name'':
-    ''English'', ''level'': ''fluent''} {''level'': ''BSc'', ''field'': ''Computer
-    Science'', ''major'': ''Node.Js''}'
+  - 'Job Title: **Accountant** Job Type: **On-site - Permanent (Full-time)** Work
+    Location: **Addis Ababa, Ethiopia** Applicants Needed: **Female** Salary/Compensation:
+    **Monthly** Deadline: **February 10th, 2026** **Description**: Are you a dedicated
+    and meticulous Accountant eager to make a significant impact? **SOTEAM Car Rent**
+    is searching for a talented individual to join their growing team and contribute
+    directly to the compa **... __[view details below]__** __________________ **Afriwork
+    Recruitment** __Verified Company ✅__ 532 Jobs Posted __________________ From:
+    afriworket.com | | |'
+  - 'Job Title: **Senior Sales & Marketing Manager** Job Type: **On-site - Contractual**
+    Work Location: **Addis Ababa, Ethiopia** Applicants Needed: **Female** Salary/Compensation:
+    **Monthly** Deadline: **February 12th, 2026** **Description**: **Job Summary**
+    We are looking for a highly motivated and experienced Senior Sales & Marketing
+    professional to drive growth and strengthen our market position. The role involves
+    developing strategic s **... __[view details below]__** __________________ **Private
+    Client** 7 Jobs Posted __________________ From: afriworket.com | | |'
+  - '**★ Redsea Aviation Services PLC Job Vacancy ♦Expiration date: January 25, 2026
+    Red Sea Aviation Services is a flight support company based in Addis Ababa Ethiopia.
+    ✅ Position: Reservation and Ticketing Agent ● Qualifications: Degree/Diploma in
+    Travel, Tourism, or related field from recognized universities, years of experience
+    in airline reservation and ticketing. How to Apply Online?? **** : ❗️Telegram:-
+    ****'
+- source_sentence: 'Experienced Database Administrator with expertise in Oracle RDBMS,
+    RMAN, Data Guard, ASM, RAC, and Golden Gate. Skilled in database management, upgrades,
+    migrations, and troubleshooting in production environments. {''level'': ''BE'',
+    ''field'': ''Computer Science and Engineering'', ''major'': None}'
   sentences:
-  - '**Accountant (Female Only) **is needed **Company**: Monarch Trading PLC **Location**:
-    Addis Ababa **Employment Type:** Office / Full Time **Requirement / Qualification:**
-    • Minimum 2 years of working experience as an accountant • Strong skills in: •
-    Peachtree (Sage 50) / accounting software • Microsoft Excel • Microsoft Word •
-    Good understanding of Ethiopian tax systems • Able to work under pressure and
-    handle multiple accounting issues **Deadline**: February 28th, 2026 ** Click here
-    to learn more: **[LINK]( Category: #Accounting'
-  - 'Job Title: **Tender Officer** Job Type: **On-site - Permanent (Full-time)** Work
-    Location: **Addis Ababa, Ethiopia** Applicants Needed: **Female** Salary/Compensation:
-    **Monthly** Deadline: **February 25th, 2026** **Description**: **ob Description**
-    -Draft and compile detailed tender documents, including scope of work, specifications,
-    and evaluation criteria. - Ensure that all documents are clear, concise, and aligned
-    with organiz **... __[view details below]__** __________________ **M Advertising
-    activities** __Verified Company ✅__ 194 Jobs Posted __________________ From: afriworket.com
-    | | |'
-  - 'Job Title: **የጽዳትና ተላላኪ** Job Type: **On-site - Permanent (Full-time)** Work
-    Location: **Addis Ababa, Ethiopia** Applicants Needed: **Female** Salary/Compensation:
-    **Monthly** Deadline: **February 4th, 2026** **Description**: ** የአስናቀ ማስታወቂያ
-    ስራ** **ሥራ ዝርዝር መግለጫ ፡- ** ** **አስናቀ ማስታወቂያ ድርጅታችን ቀልጣፋ፣ የሥራ ተነሳሽነት ያላት ኃላፊነት የሚሰማት
-    **የጽዳትና ተላላኪ ባለሙያ** እንፈልጋለን፡፡ ስለሆነም ከዚህ በታች የተጠቀሱትን መስፈርቶች ማሟላት የምትችሉ **... __[view
-    details below]__** __________________ **አስናቀ ማስታወቅያ** __Verified Company ✅__ 65
-    Jobs Posted __________________ From: afriworket.com | | |'
-- source_sentence: 'Blockchain Developer with experience in smart contract development
-    and integration of blockchain technologies in decentralized applications. {''name'':
-    ''English'', ''level'': ''fluent''} {''level'': ''BSc'', ''field'': ''Computer
-    Science'', ''major'': ''Blockchain''}'
+  - '**★{በ0 አመት እና በልምድ}Anbessa Travel Job Vacancy ♦Deadline: February 8, 2026 Anbessa
+    Travel Job invites qualified applicants for the following job position. ✅ Position:
+    Sales Engineer ●Educational Requirements: B.Sc. Degree in Mechanical, Electro-Mechanical
+    or Electrical (preferably power or control) Engineering. ● 0 or 1 year of relevant
+    experience is required. We highly encourage female applicants to apply. How to
+    Apply Online?? **** : ****'
+  - Ondo Finance is hiring [Onboarding Specialist (Copy)](
+  - '**★ ሳፋሪ ኮም ኢትዮጲያ አዲስ የስራ ማስታወቂያ ♦Deadline: 01/11/2026 Safaricom Ethiopia would
+    like to invite qualified candidates for the following job positions. ✅ Position
+    1: Specialist CVM Development and Operations ● Qualifications: Bachelor’s degree
+    in Computer Science, Information Systems, or a related field, with years of experience
+    in data development, ETL workflows, or campaign platform operations. ✅ Position
+    2: Executive Head of Department Trade Marketing ● Professional qualifications:
+    Degree in a Business-related field Post graduate certification in Sales & Marketing
+    will be an added advantage ○ Intermediate knowledge of business finance principles
+    is essential with hands on experience in Sales Distribution management in a FMCG
+    or service sector of which 2 years must have been in a sales managerial position,
+    ✅ Position 3: Executive Head of Department -Treasury ● Professional qualifications:
+    Qualified Accountant (CPA-K, CIMA, ACCA, ACA, or equivalent) with an honors degree
+    from a recognized university, with years of accounting experience, preferably
+    in an international company. Minimum 3 years of management experience. How to
+    Apply Online?? **** : Telegram☞ ****'
+- source_sentence: 'Popular north else sound center throughout. Thousand rock speak
+    yeah. Lawyer where later person including. {''name'': ''English'', ''level'':
+    ''fluent''} {''level'': ''MSc'', ''field'': ''Computer Science'', ''major'': ''Node.Js''}'
+  sentences:
+  - '**★ የኢትዮጵያ ካፒታል ማርኬት ባለስልጣን የስራ ማስታወቂያ ♦Deadline: February 1, 2026 Ethiopian
+    Capital Market Authority Job Vacancy 2025. ✅ Position: Senior Regulatory Policy
+    Development Officer II ● Qualification Requirements: Bachelor’s degree or higher
+    in Economics from a recognized and accredited institution. ● Years of progressive
+    experience in policy formulation, strategic planning, and Monitoring & Evaluation
+    (M&E). How to Apply?? **** : Telegram:- ****'
+  - '**★ የኢትዮጵያ አየር መንገድ አዲስ የስራ ማስታወቂያ ♦Closing Date: January 25, 2026 Ethiopian
+    Airlines Group would like to invite qualified applicants for the positions. ●
+    Adjunct Professor of Aircraft Structures ● Adjunct Professor of Aircraft Stability
+    and Control ● Adjunct Professor of Aircraft Propulsion ● Adjunct Professor of
+    Aircraft Maintenance Practices ● Adjunct Professor of Aircraft Electrical Systems
+    ● Adjunct Professor of Aircraft Communication & Navigation Systems ● Adjunct Professor
+    of Aerodynamics ● Adjunct Professor of Accounting ● Adjunct Professor of Unmanned
+    Aircraft Systems ● Adjunct Professor of Principles of Resource Sequencing and
+    Scheduling ● Adjunct Professor of Piston Engines and Propellers ● Adjunct Professor
+    of Managerial Economics ● Adjunct Professor of Managerial Finance ● Adjunct Professor
+    of Mechanisms of Machinery ● Adjunct Professor of Management Information Systems
+    (MIS) for Aviation ● Adjunct Professor of Logistics and Supply Chain Management
+    for Aviation ● Adjunct Professor of Human Resource Management (HRM) in the Aviation
+    Industry ● Adjunct Professor of Econometrics for Aviation ● Adjunct Professor
+    of Entrepreneurship in Aviation ● Adjunct Professor of Gas Turbine Engines & Systems
+    ● Adjunct Professor of Digital Electronics & Microprocessors ● Adjunct Professor
+    of Cost and Management Accounting ● Adjunct Professor of Aircraft Systems How
+    to Apply Online?? **** : Telegram:- ****'
+  - '**★ Job Vacancy at Fiam Architects and Engineers Deadline: January 23rd, 2026
+    ✅Position: Senior Accountant ■ Requirement/Qualification: • BA Degree (or higher)
+    in Accounting or Finance • Minimum of 6 years proven experience in accounting,
+    with at least 3 years in a senior or supervisory role. • Experience of work in
+    Construction and Engineering consulting company. • Solid knowledge of accounting
+    principles, financial regulations, and tax laws. • Proficiency in accounting software
+    (e.g., Peachtree, QuickBooks, ERP systems). • Strong analytical, problem-solving,
+    and communication skills. • Ability to work under pressure and meet deadlines
+    with high accuracy. ○ Location: Addis Ababa, Gerji ○ Employment type: Full-time
+    Apply Here: Telegram ******'
+- source_sentence: 'Mind management fact structure even without art poor. Speech question
+    way something indicate area. {''name'': ''English'', ''level'': ''fluent''} {''level'':
+    ''MSc'', ''field'': ''Computer Science'', ''major'': ''Database''}'
+  sentences:
+  - 'Job Title: **Secretary** Job Type: **On-site - Permanent (Full-time)** Work Location:
+    **Addis Ababa, Ethiopia** Applicants Needed: **Female** Salary/Compensation: **Monthly**
+    Deadline: **February 4th, 2026** **Description**: - Diploma or Degree in Secretarial
+    Science, Office Administration, or a related field - Proven experience as a secretary
+    or administrative assistant - Excellent communication skills in E **... __[view
+    details below]__** __________________ **American International School of Ethiopia**
+    __Verified Company ✅__ 1 Jobs Posted __________________ From: afriworket.com |
+    | |'
+  - '**★ የኢትዮጵያ ስካይላይት ሆቴል የስራ ማስታወቂያ [Ethiopian SkyLight Hotel Vacancy] ♦Deadline:
+    January 24, 2026 Ethiopian Skylight Hotel invites qualified applicants for the
+    following position for Eco lounges. ✅ Position 1: Executive Housekeeper ● A Minimum
+    of BA Degree in Hotel management\ Property ManagementManagement/Marketing Management
+    /Economics/Business Administration/ Accounting/ Economics & Finance/Business Administration
+    & Information systems or any related field of study from a recognized TVET/College/university
+    with a minimum 4 years’ experience in Housekeeing ✅ Position 2: Commis ● REQUIREMENT:
+    Level 10+2/Level II in Food Preparation/ Kitchen Operation / Foreign Dish Cooking/
+    Ethiopian Cultural Food Preparation /*Confectionery/*Baking and Pastry or any
+    related field of study from recognized TVET/ College/ Institute with two years
+    related experience in hotel Services. ✅ Position 3: Security Officer ● REQUIREMENT:
+    A Minimum of 12th/10th grade Complete per the old ****/new**** curriculum with
+    a minimum of three years experience from known organization as security officer,
+    police, military services areas. How to Apply?? **** : Telegram:- ****'
+  - Ripple is hiring [Senior Recruiter - Hybrid (12-Month Contract)](
+- source_sentence: 'Half laugh senior outside. Hear always today customer fund method
+    condition significant. Later network be itself capital however house. Increase
+    red series store job animal notice. {''name'': ''English'', ''level'': ''fluent''}
+    {''level'': ''BSc'', ''field'': ''Computer Science'', ''major'': ''Machine''}
+    {''level'': ''BSc'', ''field'': ''Computer Science'', ''major'': ''Machine''}'
   sentences:
   - Ondo Finance is hiring [Head of Business Operations](
-  - BitGo is hiring [Senior Software Engineer - Stablecoins](
-  - Mysten Labs is hiring [Product Marketing Manager, Deepbook](
-- source_sentence: 'Also music for southern force television glass vote. Word father
-    action city history car. {''name'': ''English'', ''level'': ''fluent''} {''level'':
-    ''MSc'', ''field'': ''Computer Science'', ''major'': ''Frontend''} {''level'':
-    ''BSc'', ''field'': ''Computer Science'', ''major'': ''Frontend''}'
-  sentences:
-  - Anchorage is hiring [Member of Information & Security](
-  - '**★ የኢትዮጵያ ሰብአዊ መብት ኮሚሽን የስራ ማስታወቂያ ♦Deadline: January 23rd, 2026 Ethiopian Human
-    Rights Commission (EHRC) invites qualified applicants for the following job positions.
-    ✅ Position 1: Human Rights Officer, Transitional Justice ✅ Position 2: IT Operations
-    and Cloud System Engineer ✅ Position 3: Human Rights Education Officer ✅ Position
-    4: Senior Human Rights Officer, Transitional Justice ✅ Position 5: Technical Cloud
-    Support Engineer ✅ Position 6: Cloud Systems Administrator / MS365 Administrator
-    ✅ Position 7: Network and Cloud Security Engineer ✅ Position 8: Senior Project
-    Accountant/Finance Officer How to Apply Online?? **** : Telegram:- ****'
-  - 'Job Title: **Aestheticians and Skin Care Professional** Job Type: **On-site -
-    Permanent (Full-time)** Work Location: **Addis Ababa, Ethiopia** Applicants Needed:
-    **Female** Salary/Compensation: **Monthly** Deadline: **February 9th, 2026** **Description**:
-    Glow Ethio-Turkiye Skin Care and Aesthetic Center is a leading and reputable establishment
-    dedicated to providing comprehensive skincare and aesthetic services. We are currently
-    seeking a highly skil **... __[view details below]__** __________________ **Prime
-    Medicare PLC** __Verified Company ✅__ 37 Jobs Posted __________________ From:
-    afriworket.com | | |'
-- source_sentence: 'IABAC Certified Data Scientist with versatile experience over
-    1+ years in managing business, data science consulting and leading innovation
-    projects, bringing business ideas to working real world solutions. Being a strong
-    advocator of augmented era, where human capabilities are enhanced by machines,
-    Fahed is passionate about bringing business concepts in area of machine learning,
-    AI, robotics etc., to real life solutions. {''level'': ''B. Tech'', ''field'':
-    ''Computer Science & Engineering'', ''major'': None}'
-  sentences:
-  - '**★ Job Vacancy Physiotherapist and Reflexology Therapist Attention Skincare
-    and Reflexology Deadline: January 17, 2026 ✅ Position: Physiotherapist and Reflexology
-    Therapist ■ Requirements: Valid Physiotherapist and Reflexology Therapist license
-    Strong professional ethics and client care skills How to Apply: Interested applicants
-    should send the following: • Updated CV • Copies of certificates □ Phone number
-    Submit via: ******** on telegram**'
-  - 'Job Title: **Multi-Media Content Creator & Strategist** Job Type: **On-site -
-    Permanent (Full-time)** Work Location: **Addis Ababa, Ethiopia** Salary/Compensation:
-    **Monthly** Deadline: **February 26th, 2026** **Description**: **Job Vacancy:
-    Multi-Media Content Creator & Strategist** **Company:** ETCARE Saving And Credit
-    Cooperative Society **Location:** Addis Ababa **Employment Type:** Full-time **Deadline:**
-    Feb 4, 2026 **Role Overview** We **... __[view details below]__** __________________
-    **ኢቲኬር የገንዘብ ቁጠባና ብድር ኃላፊነቱ የተወሰነ የህብረት ሥራ ማኅበር** __Verified Company ✅__ 10 Jobs
-    Posted __________________ From: afriworket.com | | |'
-  - '**★Misrak Food Complex Job Vacancy - በ0 አመት እና በልምድ ♦Deadline: January 24, 2026
-    Misrak Food Complex PVT.Ltd.Co invites qualified applicants for the following
-    job positions. ✅ Position: Sales Person ● Qualification: BA Degree / Level 4 in
-    in Marketing management, salesmanship, Management, Business Administration or
-    similar field and 0/2 years relevant work experience ****/experience**** in food
-    manufacturing industries is preferable / How to Apply Online?? **** : Telegram:-
-    ****'
+  - '- - - - - - - - CLOSED - - - - - - - - Job Title: **Technical Project Manager
+    and Software Engineer** Job Type: **On-site - Permanent (Full-time)** Work Location:
+    **Addis Ababa, Ethiopia** Salary/Compensation: **Monthly** Deadline: **February
+    26th, 2026** **Description**: We are looking for a Technical Project Manager with
+    a strong software development background who can manage multiple technology projects
+    end-to-end while also actively contributing to software develop **... __[view
+    details below]__** __________________ **Private Client** 3 Jobs Posted __________________
+    From: afriworket.com | | | - - - - - - - - CLOSED - - - - - - - -'
+  - 'Job Title: **MECHANICAL AND ELECTRICAL ENGINEERS** Job Type: **On-site - Permanent
+    (Full-time)** Work Location: **Addis Ababa, Ethiopia** Salary/Compensation: **Monthly**
+    Deadline: **February 12th, 2026** **Description**: All Grade 8, Grade 10, Grade
+    12, and Degree certificates must be attached. We are seeking energetic and motivated
+    Mechanical and Electrical Engineers to join our growing team. As part of our creative
+    **... __[view details below]__** __________________ **BRAND ENGINEERING PLC**
+    __Verified Company ✅__ 9 Jobs Posted __________________ From: afriworket.com |
+    | |'
 pipeline_tag: sentence-similarity
 library_name: sentence-transformers
 metrics:
@@ -129,10 +165,10 @@ model-index:
       type: val
     metrics:
     - type: pearson_cosine
-      value: 0.9907129456235727
+      value: 0.992205500787213
       name: Pearson Cosine
     - type: spearman_cosine
-      value: 0.9793417952082739
+      value: 0.98185391586636
       name: Spearman Cosine
 ---
 
@@ -186,9 +222,9 @@ from sentence_transformers import SentenceTransformer
 model = SentenceTransformer("sentence_transformers_model_id")
 # Run inference
 sentences = [
-    "IABAC Certified Data Scientist with versatile experience over 1+ years in managing business, data science consulting and leading innovation projects, bringing business ideas to working real world solutions. Being a strong advocator of augmented era, where human capabilities are enhanced by machines, Fahed is passionate about bringing business concepts in area of machine learning, AI, robotics etc., to real life solutions. {'level': 'B. Tech', 'field': 'Computer Science & Engineering', 'major': None}",
-    'Job Title: **Multi-Media Content Creator & Strategist** Job Type: **On-site - Permanent (Full-time)** Work Location: **Addis Ababa, Ethiopia** Salary/Compensation: **Monthly** Deadline: **February 26th, 2026** **Description**: **Job Vacancy: Multi-Media Content Creator & Strategist** **Company:** ETCARE Saving And Credit Cooperative Society **Location:** Addis Ababa **Employment Type:** Full-time **Deadline:** Feb 4, 2026 **Role Overview** We **... __[view details below]__** __________________ **ኢቲኬር የገንዘብ ቁጠባና ብድር ኃላፊነቱ የተወሰነ የህብረት ሥራ ማኅበር** __Verified Company ✅__ 10 Jobs Posted __________________ From: afriworket.com | | |',
-    '**★Misrak Food Complex Job Vacancy - በ0 አመት እና በልምድ ♦Deadline: January 24, 2026 Misrak Food Complex PVT.Ltd.Co invites qualified applicants for the following job positions. ✅ Position: Sales Person ● Qualification: BA Degree / Level 4 in in Marketing management, salesmanship, Management, Business Administration or similar field and 0/2 years relevant work experience ****/experience**** in food manufacturing industries is preferable / How to Apply Online?? **** : Telegram:- ****',
+    "Half laugh senior outside. Hear always today customer fund method condition significant. Later network be itself capital however house. Increase red series store job animal notice. {'name': 'English', 'level': 'fluent'} {'level': 'BSc', 'field': 'Computer Science', 'major': 'Machine'} {'level': 'BSc', 'field': 'Computer Science', 'major': 'Machine'}",
+    'Ondo Finance is hiring [Head of Business Operations](',
+    'Job Title: **MECHANICAL AND ELECTRICAL ENGINEERS** Job Type: **On-site - Permanent (Full-time)** Work Location: **Addis Ababa, Ethiopia** Salary/Compensation: **Monthly** Deadline: **February 12th, 2026** **Description**: All Grade 8, Grade 10, Grade 12, and Degree certificates must be attached. We are seeking energetic and motivated Mechanical and Electrical Engineers to join our growing team. As part of our creative **... __[view details below]__** __________________ **BRAND ENGINEERING PLC** __Verified Company ✅__ 9 Jobs Posted __________________ From: afriworket.com | | |',
 ]
 embeddings = model.encode(sentences)
 print(embeddings.shape)
@@ -197,9 +233,9 @@ print(embeddings.shape)
 # Get the similarity scores for the embeddings
 similarities = model.similarity(embeddings, embeddings)
 print(similarities)
-# tensor([[1.0000, 0.4225, 0.3203],
-#         [0.4225, 1.0000, 0.3965],
-#         [0.3203, 0.3965, 1.0000]])
+# tensor([[1.0000, 0.5113, 0.3590],
+#         [0.5113, 1.0000, 0.3768],
+#         [0.3590, 0.3768, 1.0000]])
 ```
 
 <!--
@@ -237,8 +273,8 @@ You can finetune this model on your own dataset.
 
 | Metric              | Value      |
 |:--------------------|:-----------|
-| pearson_cosine      | 0.9907     |
-| **spearman_cosine** | **0.9793** |
+| pearson_cosine      | 0.9922     |
+| **spearman_cosine** | **0.9819** |
 
 <!--
 ## Bias, Risks and Limitations
@@ -258,19 +294,19 @@ You can finetune this model on your own dataset.
 
 #### Unnamed Dataset
 
-* Size: 4,609 training samples
+* Size: 4,571 training samples
 * Columns: <code>sentence_0</code>, <code>sentence_1</code>, and <code>label</code>
 * Approximate statistics based on the first 1000 samples:
-  |         | sentence_0                                                                        | sentence_1                                                                          | label                                                             |
-  |:--------|:----------------------------------------------------------------------------------|:------------------------------------------------------------------------------------|:------------------------------------------------------------------|
-  | type    | string                                                                            | string                                                                              | float                                                             |
-  | details | <ul><li>min: 3 tokens</li><li>mean: 94.6 tokens</li><li>max: 256 tokens</li></ul> | <ul><li>min: 3 tokens</li><li>mean: 121.92 tokens</li><li>max: 256 tokens</li></ul> | <ul><li>min: -0.01</li><li>mean: 0.32</li><li>max: 0.68</li></ul> |
+  |         | sentence_0                                                                         | sentence_1                                                                          | label                                                             |
+  |:--------|:-----------------------------------------------------------------------------------|:------------------------------------------------------------------------------------|:------------------------------------------------------------------|
+  | type    | string                                                                             | string                                                                              | float                                                             |
+  | details | <ul><li>min: 3 tokens</li><li>mean: 92.03 tokens</li><li>max: 256 tokens</li></ul> | <ul><li>min: 2 tokens</li><li>mean: 123.45 tokens</li><li>max: 256 tokens</li></ul> | <ul><li>min: -0.01</li><li>mean: 0.31</li><li>max: 0.72</li></ul> |
 * Samples:
-  | sentence_0                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            | sentence_1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | label                            |
-  |:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------|
-  | <code>Money marriage heavy name. Service room condition eat order. Reason situation statement by require. Section area true sometimes. {'name': 'English', 'level': 'fluent'} {'level': 'MSc', 'field': 'Computer Science', 'major': 'Node.Js'}</code>                                                                                                                                                                                                                                                                                | <code>**★ እናት ባንክ አዲስ የስራ ማስታወቂያ ♦Deadline: February 2, 2026 Enat Bank S.C invites qualified applicants for the Senior vacant job positions. ✅ Position 1: IS Security Operations Analyst ● Qualification: MSc/BSc in Computer Science, IT, Cyber security or related field with Minimum 3.5/5.5 years in SOC operations, incident response, or IT security. Security+, CySA+, CSA, CEH, or equivalent preferred. ✅ Position 2: Branch Manager Grade C ●Job Requirement: MA/MBA in Banking & Finance, Accounting, Business Administration, Economics, Management and any other related fields with 6.5 years of experience or BA in the same fields with 8.5 years of experience in banking industry, of which 2 years in customer services manager grade B ****/or**** 3 years as Branch accounts administrator position Grade A. How to Apply Online?? **** : Telegram:- ****</code> | <code>0.23547467589378357</code> |
-  | <code>Republican crime break tend society whatever leader. But expect state agent reflect view. Culture up daughter. Section wonder argue sit tree. What war hotel key. {'name': 'English', 'level': 'fluent'} {'level': 'MSc', 'field': 'Computer Science', 'major': 'Software'}</code>                                                                                                                                                                                                                                              | <code>True</code>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | <code>0.15207058191299438</code> |
-  | <code>IABAC Certified Data Scientist with versatile experience over 1+ years in managing business, data science consulting and leading innovation projects, bringing business ideas to working real world solutions. Being a strong advocator of augmented era, where human capabilities are enhanced by machines, Fahed is passionate about bringing business concepts in area of machine learning, AI, robotics etc., to real life solutions. {'level': 'B. Tech', 'field': 'Computer Science & Engineering', 'major': None}</code> | <code>Job Title: **Tailor & Sales** Job Type: **On-site - Permanent (Full-time)** Work Location: **Addis Ababa, Ethiopia** Applicants Needed: **Female** Salary/Compensation: **8000 ETB Monthly** Deadline: **January 30th, 2026** **Description**: Job Title: Tailor & Sales Assistant **Job Description** We are looking for a reliable Tailor & Sales Assistant to support both garment making and customer sales. The role includes sewing, fitt **... __[view details below]__** __________________ **Rahela** __Verified Company ✅__ 4 Jobs Posted __________________ From: afriworket.com \| \| \|</code>                                                                                                                                                                                                                                                                      | <code>0.45257818698883057</code> |
+  | sentence_0                                                                                                                                                                                                                                                                                             | sentence_1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | label                            |
+  |:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------|
+  | <code>Main they decade require old beat. Father environmental skill certain value member. Teacher usually moment church. Administration central film note show. {'name': 'English', 'level': 'fluent'} {'level': 'MSc', 'field': 'Computer Science', 'major': 'React'}</code>                          | <code>: **[NGO 0 ]    Deadline: January 26, 2026 The International Rescue Committee (IRC) qualified applicants this ngo job position.  Position: Intern Positions  Talent Acquisition Intern  Supply Chain Intern  Safety and Security Intern  Partnership Intern  Health Intern  IT Intern  Strategy Intern Requirements: • 0-year relevant work experience for first degree. • 2 years</code>                                                                                                                                                                                                                                                    | <code>0.26340439915657043</code> |
+  | <code>Vote environment seek piece third behind anyone find. Republican indicate pass stand. Each quickly fish end. {'name': 'English', 'level': 'fluent'} {'level': 'MSc', 'field': 'Computer Science', 'major': 'Frontend'} {'level': 'BSc', 'field': 'Computer Science', 'major': 'Frontend'}</code> | <code>Job Title: **Video Editor** Job Type: **On-site - Permanent (Full-time)** Work Location: **Addis Ababa, Ethiopia** Salary/Compensation: **Monthly** Deadline: **February 9th, 2026** **Description**: Yonile is looking for a creative and detail-oriented **Video Editor** to produce high-quality video content that supports our marketing goals and brand identity. The Video Editor will be responsible for t **... __[view details below]__** __________________ **Private Client** 10 Jobs Posted __________________ From: afriworket.com \| \| \|</code>                                                                             | <code>0.13730210065841675</code> |
+  | <code>Flutter Developer specializing in mobile app development and user experience design. Skilled in Dart, Flutter SDK, and cross-platform development. {'name': 'English', 'level': 'fluent'} {'level': 'MSc', 'field': 'Computer Science', 'major': 'Flutter'}</code>                               | <code>Job Title: **School Accountant** Job Type: **On-site - Permanent (Full-time)** Work Location: **Addis Ababa, Ethiopia** Applicants Needed: **Female** Salary/Compensation: **Monthly** Deadline: **February 13th, 2026** **Description**: **Job Application: School Accountant** Position: **School Accountant** Location: Asko Progress Academy/Addis Ababa, Asko branch/ Employment Type: Full-time **Job Summary** Asko Progress Academy is seeking a qua **... __[view details below]__** __________________ **Asco Progress Academy PLC** __Verified Company ✅__ 14 Jobs Posted __________________ From: afriworket.com \| \| \|</code> | <code>0.17868436872959137</code> |
 * Loss: [<code>CosineSimilarityLoss</code>](https://sbert.net/docs/package_reference/sentence_transformer/losses.html#cosinesimilarityloss) with these parameters:
   ```json
   {
@@ -415,22 +451,18 @@ You can finetune this model on your own dataset.
 ### Training Logs
 | Epoch  | Step | Training Loss | val_spearman_cosine |
 |:------:|:----:|:-------------:|:-------------------:|
-| 0.4983 | 144  | -             | 0.9446              |
-| 0.9965 | 288  | -             | 0.9620              |
-| 1.0    | 289  | -             | 0.9625              |
-| 1.4948 | 432  | -             | 0.9692              |
-| 1.7301 | 500  | 0.0032        | -                   |
-| 1.9931 | 576  | -             | 0.9698              |
-| 2.0    | 578  | -             | 0.9700              |
-| 2.4913 | 720  | -             | 0.9741              |
-| 2.9896 | 864  | -             | 0.9738              |
-| 3.0    | 867  | -             | 0.9743              |
-| 3.4602 | 1000 | 0.0012        | -                   |
-| 3.4879 | 1008 | -             | 0.9784              |
-| 3.9862 | 1152 | -             | 0.9781              |
-| 4.0    | 1156 | -             | 0.9784              |
-| 4.4844 | 1296 | -             | 0.9784              |
-| 4.9827 | 1440 | -             | 0.9793              |
+| 0.5    | 143  | -             | 0.9604              |
+| 1.0    | 286  | -             | 0.9644              |
+| 1.5    | 429  | -             | 0.9710              |
+| 1.7483 | 500  | 0.003         | -                   |
+| 2.0    | 572  | -             | 0.9729              |
+| 2.5    | 715  | -             | 0.9797              |
+| 3.0    | 858  | -             | 0.9793              |
+| 3.4965 | 1000 | 0.0012        | -                   |
+| 3.5    | 1001 | -             | 0.9802              |
+| 4.0    | 1144 | -             | 0.9800              |
+| 4.5    | 1287 | -             | 0.9802              |
+| 5.0    | 1430 | -             | 0.9819              |
 
 
 ### Framework Versions

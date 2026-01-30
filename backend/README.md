@@ -1,81 +1,42 @@
-# Resume-Job Matcher API
+# Backend API
 
-Production-ready FastAPI backend for matching resumes with Telegram job posts using fine-tuned BERT model.
+FastAPI backend for AI-powered resume-job matching system with LLM enhancement.
 
 ## Features
 
-- 🤖 **AI-Powered Matching**: Fine-tuned BERT model for semantic similarity
-- 📱 **Telegram Scraping**: Scrapes job posts from public Ethiopian job channels
-- ⚡ **Fast & Async**: Async endpoints with Redis caching
-- 🔒 **Production-Ready**: Rate limiting, error handling, health checks
-- 🐳 **Docker Support**: Complete containerization with docker-compose
-- 📊 **Smart Ranking**: Returns jobs ranked by match score
-
-## Architecture
-
-```
-┌─────────────┐
-│   Client    │
-└──────┬──────┘
-       │ POST /match_resume
-       ▼
-┌─────────────────┐
-│  FastAPI API    │
-├─────────────────┤
-│ • Rate Limiting │
-│ • Validation    │
-│ • Logging       │
-└────┬────────┬───┘
-     │        │
-     │        ▼
-     │   ┌─────────┐
-     │   │  Redis  │ (Job Cache)
-     │   └─────────┘
-     │
-     ▼
-┌──────────────┐      ┌──────────────┐
-│   Telegram   │      │  BERT Model  │
-│   Scraper    │      │  Inference   │
-└──────────────┘      └──────────────┘
-```
-
-## Prerequisites
-
-1. **Telegram API Credentials**
-   - Go to https://my.telegram.org/apps
-   - Create an application
-   - Get `api_id` and `api_hash`
-
-2. **Fine-tuned Model**
-   - Place your fine-tuned model in `./fine_tuned_bert/`
-   - Or use Hugging Face Hub path
-
-3. **Docker & Docker Compose** (for containerized deployment)
+- 🤖 Fine-tuned Sentence Transformer for semantic matching
+- 🧠 Gemini LLM for resume analysis and job explanations
+- 📄 PDF resume upload support
+- 🔒 Automatic PII removal
+- 🔗 Direct Telegram links to job posts
+- ⚡ Redis caching
+- 📱 Telegram job scraping
+- 🐳 Docker support
 
 ## Quick Start
 
-### 1. Clone and Setup
+### Local Development
 
+1. Install dependencies:
 ```bash
-cd backend
+pip install -r requirements.txt
+```
+
+2. Configure `.env` file:
+```bash
 cp .env.example .env
+# Edit .env with your credentials
 ```
 
-### 2. Configure Environment
-
-Edit `.env` with your credentials:
-
-```env
-TELEGRAM_API_ID=12345678
-TELEGRAM_API_HASH=your_hash_here
-TELEGRAM_PHONE=+251912345678
-MODEL_PATH=./fine_tuned_bert
+3. Start server:
+```bash
+./run_server.sh
 ```
 
-### 3. Run with Docker Compose
+### Docker Deployment
 
 ```bash
-# Build and start services
+# Build and start all services
 docker-compose up -d
 
 # View logs
@@ -85,264 +46,136 @@ docker-compose logs -f api
 docker-compose down
 ```
 
-### 4. Run Locally (Development)
-
-```bash
-# Install dependencies
-pip install -r requirements.txt
-
-# Run server
-uvicorn main:app --reload --host 0.0.0.0 --port 8000
-```
-
 ## API Endpoints
 
-### Health Check
-```bash
-GET /health
-```
+### POST /process_resume
+Process resume with LLM to extract key information and provide feedback.
 
-Response:
+**Request (Form Data):**
+- `resume_text`: Plain text resume (optional)
+- `resume_file`: PDF file (optional)
+
+**Response:**
 ```json
 {
-  "status": "healthy",
-  "model_loaded": true,
-  "scraper_ready": true,
-  "cache_ready": true,
-  "timestamp": "2024-01-30T12:00:00"
+  "processed_resume": "Cleaned resume text...",
+  "cleaned_for_matching": "Resume for ML matching...",
+  "score": 8,
+  "strengths": ["Clear technical skills", "Quantified achievements"],
+  "improvements": ["Add certifications", "Expand leadership"],
+  "key_skills": ["Python", "AWS", "Docker"],
+  "experience_years": "5+"
 }
 ```
 
-### Match Resume
-```bash
-POST /match_resume
-Content-Type: application/json
+### POST /match_resume
+Match resume with scraped jobs.
 
+**Request:**
+```json
 {
-  "resume_text": "Software Engineer with 5 years Python experience...",
+  "resume_text": "string",
   "threshold": 0.6,
-  "max_results": 20
+  "max_results": 20,
+  "generate_explanations": true
 }
 ```
 
-Response:
+**Response:**
 ```json
 {
   "matches": [
     {
-      "job_text": "Senior Python Developer needed...",
+      "job_text": "...",
       "score": 0.85,
-      "source_channel": "@ethiojobs",
-      "title": "Senior Python Developer",
-      "scraped_at": "2024-01-30T12:00:00"
+      "source_channel": "@channel",
+      "title": "Senior Developer",
+      "scraped_at": "2026-01-30T...",
+      "explanation": "Strong match because..."
     }
   ],
-  "total_jobs_scraped": 150,
-  "total_matches": 12,
+  "total_jobs_scraped": 104,
+  "total_matches": 5,
   "processing_time_seconds": 2.5
 }
 ```
 
-### Refresh Jobs (Admin)
-```bash
-POST /refresh_jobs
-```
+### GET /health
+Health check endpoint.
 
+### POST /refresh_jobs
 Force refresh job cache (rate limited: 2/hour).
 
 ## Configuration
 
-### Telegram Channels
+Environment variables in `.env`:
 
-Edit `config.py` or set environment variable:
+**Required:**
+- `TELEGRAM_API_ID` - Telegram API ID
+- `TELEGRAM_API_HASH` - Telegram API hash
+- `TELEGRAM_PHONE` - Phone number
+- `TELEGRAM_CHANNELS` - JSON array of channels
+- `MODEL_PATH` - Path to model directory
 
-```python
-TELEGRAM_CHANNELS = [
-    "@ethiojobs",
-    "@jobs_in_ethiopia",
-    "@ethiopianjobs",
-    "@addisababa_jobs"
-]
-```
+**Optional:**
+- `GEMINI_API_KEY` - Gemini API key (for LLM features)
+- `GEMINI_MODEL` - Model name (default: gemini-1.5-flash)
+- `REDIS_URL` - Redis connection URL
+- `MAX_POSTS_PER_CHANNEL` - Max posts to scrape (default: 100)
+- `CACHE_TTL_SECONDS` - Cache TTL (default: 3600)
 
-### Scraping Settings
+## Testing
 
-```python
-MAX_POSTS_PER_CHANNEL = 100  # Posts to fetch per channel
-SCRAPE_SLEEP_SECONDS = 3.0   # Sleep between channels
-CACHE_TTL_SECONDS = 3600     # Cache duration (1 hour)
-```
-
-### Job Keywords
-
-Jobs are filtered by keywords (edit in `config.py`):
-
-```python
-JOB_KEYWORDS = [
-    "vacancy", "job", "hiring", "position", 
-    "opening", "career", "opportunity"
-]
-```
-
-## Model Format
-
-The API expects a fine-tuned model trained on the `facehuggerapoorv/resume-jd-match` dataset format:
-
-**Input format:**
-```
-For the given job description <<JD text>> the resume: <<resume text>>. The result is,
-```
-
-**Output:** Regression score (0-1)
-
-### Using Your Model
-
-1. **Local model:**
-   ```bash
-   # Place model files in backend/fine_tuned_bert/
-   backend/
-   └── fine_tuned_bert/
-       ├── config.json
-       ├── model.safetensors
-       ├── tokenizer.json
-       └── ...
-   ```
-
-2. **Hugging Face Hub:**
-   ```python
-   MODEL_PATH = "your-username/fine-tuned-resume-matcher"
-   ```
-
-## Rate Limiting
-
-- `/match_resume`: 10 requests/minute per IP
-- `/refresh_jobs`: 2 requests/hour per IP
-
-## Caching
-
-Jobs are cached in Redis for 1 hour to avoid repeated scraping:
-- First request: Scrapes fresh jobs (~10-30s)
-- Subsequent requests: Uses cache (~1-3s)
-
-## Security Features
-
-- ✅ Rate limiting (slowapi)
-- ✅ Input validation (Pydantic)
-- ✅ CORS configuration
-- ✅ Non-root Docker user
-- ✅ Health checks
-- ✅ Structured logging
-- ✅ Error handling
-
-## Monitoring
-
-### Health Check
 ```bash
-curl http://localhost:8000/health
+# Test API
+python3 tests/test_api.py
+
+# Test with PDF
+curl -X POST http://localhost:8000/process_resume \
+  -F "resume_file=@resume.pdf"
+
+# Test matching with explanations
+curl -X POST http://localhost:8000/match_resume \
+  -H "Content-Type: application/json" \
+  -d '{
+    "resume_text": "Your resume...",
+    "generate_explanations": true
+  }'
 ```
 
-### Logs
-```bash
-# Docker
-docker-compose logs -f api
+## Architecture
 
-# Local
-# Logs printed to stdout
-```
+See [ARCHITECTURE.md](ARCHITECTURE.md) for detailed architecture documentation.
 
-### Metrics
-- Processing time per request
-- Cache hit/miss rate
-- Jobs scraped count
-- Match count
+## Performance Optimizations
+
+- Multi-stage Docker builds for smaller images
+- Redis caching for scraped jobs
+- Batch embedding generation
+- Connection pooling
+- Health checks and graceful shutdown
+- Rate limiting
+
+## Rate Limits
+
+- `/match_resume`: 10 requests/minute
+- `/refresh_jobs`: 2 requests/hour
+
+## Docker Services
+
+- **api**: FastAPI application
+- **redis**: Redis cache
 
 ## Troubleshooting
 
-### Telegram Connection Issues
+**LLM features not working:**
+- Check `GEMINI_API_KEY` is set correctly
+- Verify API key at https://makersuite.google.com/app/apikey
 
-1. **First-time login:**
-   ```bash
-   # Run locally first to authenticate
-   python -c "from scraper import TelegramScraper; import asyncio; s = TelegramScraper(...); asyncio.run(s.connect())"
-   ```
-   Enter the code sent to your phone.
+**PDF extraction fails:**
+- Ensure PDF is not password-protected
+- Try with a different PDF library
 
-2. **Session persistence:**
-   - Session saved in `resume_matcher_session.session`
-   - Mount as volume in Docker
-
-### Model Loading Issues
-
-```bash
-# Check model path
-ls -la fine_tuned_bert/
-
-# Test model loading
-python -c "from transformers import AutoModel; AutoModel.from_pretrained('./fine_tuned_bert')"
-```
-
-### Redis Connection Issues
-
-```bash
-# Check Redis
-docker-compose ps redis
-redis-cli ping
-
-# Restart Redis
-docker-compose restart redis
-```
-
-## Performance
-
-- **Cold start:** ~10-30s (scraping + inference)
-- **Cached:** ~1-3s (inference only)
-- **Memory:** ~2-4GB (model + Redis)
-- **CPU:** Optimized for CPU inference
-
-## Production Deployment
-
-### Environment Variables
-
-```bash
-# Production settings
-DEBUG=false
-CORS_ORIGINS=["https://yourdomain.com"]
-REDIS_URL=redis://redis:6379/0
-```
-
-### Scaling
-
-```yaml
-# docker-compose.yml
-api:
-  deploy:
-    replicas: 3
-    resources:
-      limits:
-        cpus: '2'
-        memory: 4G
-```
-
-### Reverse Proxy (Nginx)
-
-```nginx
-location /api {
-    proxy_pass http://localhost:8000;
-    proxy_set_header Host $host;
-    proxy_set_header X-Real-IP $remote_addr;
-}
-```
-
-## API Documentation
-
-Interactive docs available at:
-- Swagger UI: http://localhost:8000/docs
-- ReDoc: http://localhost:8000/redoc
-
-## License
-
-MIT
-
-## Support
-
-For issues or questions, please open a GitHub issue.
+**Docker build fails:**
+- Check Docker has enough memory (4GB+ recommended)
+- Clear Docker cache: `docker system prune -a`
